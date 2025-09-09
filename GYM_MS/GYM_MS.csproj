@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C59FB01F-A0CF-4DBE-901A-C83903995B87}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GYM_MS</RootNamespace>
+    <AssemblyName>GYM_MS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="SG.UnixTime.Standard, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\SG.UnixTime.Standard.1.2.0\lib\netstandard1.1\SG.UnixTime.Standard.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attendance\frmAddUpdateAttandec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance\frmAddUpdateAttandec.Designer.cs">
+      <DependentUpon>frmAddUpdateAttandec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\frmListAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance\frmListAttendance.Designer.cs">
+      <DependentUpon>frmListAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach Spelazations\Controls\ctrlSpelazationCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Coach Spelazations\Controls\ctrlSpelazationCard.Designer.cs">
+      <DependentUpon>ctrlSpelazationCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach Spelazations\frmAddUpdateSpelazation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach Spelazations\frmAddUpdateSpelazation.Designer.cs">
+      <DependentUpon>frmAddUpdateSpelazation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach Spelazations\frmListSpelazation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach Spelazations\frmListSpelazation.Designer.cs">
+      <DependentUpon>frmListSpelazation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach Spelazations\frmShowSpelazationInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach Spelazations\frmShowSpelazationInfo.Designer.cs">
+      <DependentUpon>frmShowSpelazationInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coaches\Controls\ctrlChoachCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Coaches\Controls\ctrlChoachCardWithFilter.Designer.cs">
+      <DependentUpon>ctrlChoachCardWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coaches\Controls\ctrlCoachCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Coaches\Controls\ctrlCoachCard.Designer.cs">
+      <DependentUpon>ctrlCoachCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coaches\frmAddUpdateCoaches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coaches\frmAddUpdateCoaches.Designer.cs">
+      <DependentUpon>frmAddUpdateCoaches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coaches\frmFindCoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coaches\frmFindCoach.Designer.cs">
+      <DependentUpon>frmFindCoach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coaches\frmListCoaches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coaches\frmListCoaches.Designer.cs">
+      <DependentUpon>frmListCoaches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coaches\frmShowCoachInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coaches\frmShowCoachInfo.Designer.cs">
+      <DependentUpon>frmShowCoachInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data Base Back Up\frmDataBaseBackUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data Base Back Up\frmDataBaseBackUp.Designer.cs">
+      <DependentUpon>frmDataBaseBackUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global Classes\clsGlobal.cs" />
+    <Compile Include="Global Classes\clsUtil.cs" />
+    <Compile Include="Login\frmLoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLoginScreen.Designer.cs">
+      <DependentUpon>frmLoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\Controls\ctrlMemberCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Members\Controls\ctrlMemberCard.Designer.cs">
+      <DependentUpon>ctrlMemberCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\Controls\ctrlMembersCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Members\Controls\ctrlMembersCardWithFilter.Designer.cs">
+      <DependentUpon>ctrlMembersCardWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\frmAddUpdateMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\frmAddUpdateMember.Designer.cs">
+      <DependentUpon>frmAddUpdateMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main Menu\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Menu\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\frmFindMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\frmFindMember.Designer.cs">
+      <DependentUpon>frmFindMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\frmListMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\frmListMember.Designer.cs">
+      <DependentUpon>frmListMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\frmRenewMonth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\frmRenewMonth.Designer.cs">
+      <DependentUpon>frmRenewMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members\frmShowMemberInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members\frmShowMemberInfo.Designer.cs">
+      <DependentUpon>frmShowMemberInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\Controls\ctrlPaymentCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payments\Controls\ctrlPaymentCard.Designer.cs">
+      <DependentUpon>ctrlPaymentCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\frmListPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\frmListPayments.Designer.cs">
+      <DependentUpon>frmListPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\frmShowPaymentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\frmShowPaymentInfo.Designer.cs">
+      <DependentUpon>frmShowPaymentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\Controls\ctrlPersonCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People\Controls\ctrlPersonCard.Designer.cs">
+      <DependentUpon>ctrlPersonCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\Controls\ctrlPersonCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People\Controls\ctrlPersonCardWithFilter.Designer.cs">
+      <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmAddUpdatePerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmAddUpdatePerson.Designer.cs">
+      <DependentUpon>frmAddUpdatePerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscriptions Types\Controls\ctrlSubscriptionCardInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subscriptions Types\Controls\ctrlSubscriptionCardInfo.Designer.cs">
+      <DependentUpon>ctrlSubscriptionCardInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscriptions Types\frmAddUpdateSubscriptionType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscriptions Types\frmAddUpdateSubscriptionType.Designer.cs">
+      <DependentUpon>frmAddUpdateSubscriptionType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscriptions Types\frmListSubscriptionsTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscriptions Types\frmListSubscriptionsTypes.Designer.cs">
+      <DependentUpon>frmListSubscriptionsTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscriptions Types\frmShowSubscriptionTypeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscriptions Types\frmShowSubscriptionTypeInfo.Designer.cs">
+      <DependentUpon>frmShowSubscriptionTypeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscriptions\Controls\ctrlSubscriptionCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subscriptions\Controls\ctrlSubscriptionCard.Designer.cs">
+      <DependentUpon>ctrlSubscriptionCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscriptions\frmListSubscriptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscriptions\frmListSubscriptions.Designer.cs">
+      <DependentUpon>frmListSubscriptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscriptions\frmShowSubscriptionInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscriptions\frmShowSubscriptionInfo.Designer.cs">
+      <DependentUpon>frmShowSubscriptionInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmFindPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmFindPerson.Designer.cs">
+      <DependentUpon>frmFindPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmListPepol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmListPepol.Designer.cs">
+      <DependentUpon>frmListPepol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmShowPersonInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmShowPersonInfo.Designer.cs">
+      <DependentUpon>frmShowPersonInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\Controls\ctrlUserCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\Controls\ctrlUserCard.Designer.cs">
+      <DependentUpon>ctrlUserCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Controls\ctrlUserCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\Controls\ctrlUserCardWithFilter.Designer.cs">
+      <DependentUpon>ctrlUserCardWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmAddUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmAddUpdateUser.Designer.cs">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmFindUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmFindUser.Designer.cs">
+      <DependentUpon>frmFindUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmListUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmListUsers.Designer.cs">
+      <DependentUpon>frmListUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmShowUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmShowUserInfo.Designer.cs">
+      <DependentUpon>frmShowUserInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Attendance\frmAddUpdateAttandec.resx">
+      <DependentUpon>frmAddUpdateAttandec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance\frmListAttendance.resx">
+      <DependentUpon>frmListAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach Spelazations\Controls\ctrlSpelazationCard.resx">
+      <DependentUpon>ctrlSpelazationCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach Spelazations\frmAddUpdateSpelazation.resx">
+      <DependentUpon>frmAddUpdateSpelazation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach Spelazations\frmListSpelazation.resx">
+      <DependentUpon>frmListSpelazation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach Spelazations\frmShowSpelazationInfo.resx">
+      <DependentUpon>frmShowSpelazationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coaches\Controls\ctrlChoachCardWithFilter.resx">
+      <DependentUpon>ctrlChoachCardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coaches\Controls\ctrlCoachCard.resx">
+      <DependentUpon>ctrlCoachCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coaches\frmAddUpdateCoaches.resx">
+      <DependentUpon>frmAddUpdateCoaches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coaches\frmFindCoach.resx">
+      <DependentUpon>frmFindCoach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coaches\frmListCoaches.resx">
+      <DependentUpon>frmListCoaches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coaches\frmShowCoachInfo.resx">
+      <DependentUpon>frmShowCoachInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data Base Back Up\frmDataBaseBackUp.resx">
+      <DependentUpon>frmDataBaseBackUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLoginScreen.resx">
+      <DependentUpon>frmLoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\Controls\ctrlMemberCard.resx">
+      <DependentUpon>ctrlMemberCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\Controls\ctrlMembersCardWithFilter.resx">
+      <DependentUpon>ctrlMembersCardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\frmAddUpdateMember.resx">
+      <DependentUpon>frmAddUpdateMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main Menu\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\frmFindMember.resx">
+      <DependentUpon>frmFindMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\frmListMember.resx">
+      <DependentUpon>frmListMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\frmRenewMonth.resx">
+      <DependentUpon>frmRenewMonth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members\frmShowMemberInfo.resx">
+      <DependentUpon>frmShowMemberInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\Controls\ctrlPaymentCard.resx">
+      <DependentUpon>ctrlPaymentCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\frmListPayments.resx">
+      <DependentUpon>frmListPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\frmShowPaymentInfo.resx">
+      <DependentUpon>frmShowPaymentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\Controls\ctrlPersonCard.resx">
+      <DependentUpon>ctrlPersonCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\Controls\ctrlPersonCardWithFilter.resx">
+      <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmAddUpdatePerson.resx">
+      <DependentUpon>frmAddUpdatePerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscriptions Types\Controls\ctrlSubscriptionCardInfo.resx">
+      <DependentUpon>ctrlSubscriptionCardInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscriptions Types\frmAddUpdateSubscriptionType.resx">
+      <DependentUpon>frmAddUpdateSubscriptionType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscriptions Types\frmListSubscriptionsTypes.resx">
+      <DependentUpon>frmListSubscriptionsTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscriptions Types\frmShowSubscriptionTypeInfo.resx">
+      <DependentUpon>frmShowSubscriptionTypeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscriptions\Controls\ctrlSubscriptionCard.resx">
+      <DependentUpon>ctrlSubscriptionCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscriptions\frmListSubscriptions.resx">
+      <DependentUpon>frmListSubscriptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscriptions\frmShowSubscriptionInfo.resx">
+      <DependentUpon>frmShowSubscriptionInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmFindPerson.resx">
+      <DependentUpon>frmFindPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmListPepol.resx">
+      <DependentUpon>frmListPepol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmShowPersonInfo.resx">
+      <DependentUpon>frmShowPersonInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Users\Controls\ctrlUserCard.resx">
+      <DependentUpon>ctrlUserCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\Controls\ctrlUserCardWithFilter.resx">
+      <DependentUpon>ctrlUserCardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmAddUpdateUser.resx">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmFindUser.resx">
+      <DependentUpon>frmFindUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmListUsers.resx">
+      <DependentUpon>frmListUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmShowUserInfo.resx">
+      <DependentUpon>frmShowUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GYM_BuisnessLayer\GYM_BuisnessLayer.csproj">
+      <Project>{5c6e9aa9-2db4-4355-963c-fbdc47377e5f}</Project>
+      <Name>GYM_BuisnessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spartagym.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Members.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Attendance\Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddNewPerson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birthday.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonID.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhoneNumber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anonymos man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anonymous-woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gender.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find-person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-Person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditPersonInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personal-info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhoneCall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sendEmail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newuserbuttoun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset-password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edituserinfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addnewuser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userinfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listusers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gym.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listsubscriptionstypes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addnewsubscription.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Description.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Price.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duration Days.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addnewsubscription1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PaymentCach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atm-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addnewathlete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ListMembers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\incorporation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\incorporation1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\findMember.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ListCoaches.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo_2025-08-29_16-46-23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo_2025-08-29_16-46-07.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arlond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ancestors.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subscription.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arlond1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\two.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trainer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subscription-model.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\session.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attendance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\self-service.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attendance1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

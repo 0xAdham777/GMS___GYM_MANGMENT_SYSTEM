@@ -1,0 +1,6 @@
+C:\Users\ASUS\Desktop\Programming\Course Number 21\GMS\GYM_DataAccessLayer\bin\Debug\GYM_DataAccessLayer.dll
+C:\Users\ASUS\Desktop\Programming\Course Number 21\GMS\GYM_DataAccessLayer\bin\Debug\GYM_DataAccessLayer.pdb
+C:\Users\ASUS\Desktop\Programming\Course Number 21\GMS\GYM_DataAccessLayer\obj\Debug\GYM_DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\Programming\Course Number 21\GMS\GYM_DataAccessLayer\obj\Debug\GYM_DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Programming\Course Number 21\GMS\GYM_DataAccessLayer\obj\Debug\GYM_DataAccessLayer.dll
+C:\Users\ASUS\Desktop\Programming\Course Number 21\GMS\GYM_DataAccessLayer\obj\Debug\GYM_DataAccessLayer.pdb

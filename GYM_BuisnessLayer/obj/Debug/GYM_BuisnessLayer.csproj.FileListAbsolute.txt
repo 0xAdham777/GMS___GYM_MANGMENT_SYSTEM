@@ -1,0 +1,9 @@
+C:\Users\ASUS\Desktop\Programming\Course Number 21\GMS\GYM_BuisnessLayer\bin\Debug\GYM_BuisnessLayer.dll
+C:\Users\ASUS\Desktop\Programming\Course Number 21\GMS\GYM_BuisnessLayer\bin\Debug\GYM_BuisnessLayer.pdb
+C:\Users\ASUS\Desktop\Programming\Course Number 21\GMS\GYM_BuisnessLayer\bin\Debug\GYM_DataAccessLayer.dll
+C:\Users\ASUS\Desktop\Programming\Course Number 21\GMS\GYM_BuisnessLayer\bin\Debug\GYM_DataAccessLayer.pdb
+C:\Users\ASUS\Desktop\Programming\Course Number 21\GMS\GYM_BuisnessLayer\obj\Debug\GYM_BuisnessLayer.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\Programming\Course Number 21\GMS\GYM_BuisnessLayer\obj\Debug\GYM_BuisnessLayer.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Programming\Course Number 21\GMS\GYM_BuisnessLayer\obj\Debug\GYM_Buis.CD803925.Up2Date
+C:\Users\ASUS\Desktop\Programming\Course Number 21\GMS\GYM_BuisnessLayer\obj\Debug\GYM_BuisnessLayer.dll
+C:\Users\ASUS\Desktop\Programming\Course Number 21\GMS\GYM_BuisnessLayer\obj\Debug\GYM_BuisnessLayer.pdb

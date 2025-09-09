@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SG.UnixTime.Standard</name>
+    </assembly>
+    <members>
+        <member name="T:SG.UnixTime.Standard.SGException">
+            <summary>
+            Custom Exception
+            </summary>
+        </member>
+        <member name="M:SG.UnixTime.Standard.SGException.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:SG.UnixTime.Standard.SGException.#ctor(System.String)">
+            <summary>
+            Custom Exception
+            </summary>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SG.UnixTime.Standard.SGException.#ctor(System.String,System.Exception)">
+            <summary>
+            Custom Exception
+            </summary>s
+            <param name="message">message</param>
+            <param name="innerException">innerException</param>
+        </member>
+        <member name="T:SG.UnixTime.Standard.Format">
+            <summary>
+            Time Format : UTC and Local 
+            </summary>
+        </member>
+        <member name="F:SG.UnixTime.Standard.Format.UTC">
+            <summary>
+            Display result in UTC format
+            </summary>
+        </member>
+        <member name="F:SG.UnixTime.Standard.Format.Local">
+            <summary>
+            Display result in Local Time (GMT) format
+            </summary>
+        </member>
+        <member name="T:SG.UnixTime.Standard.ConvertFormat">
+            <summary>
+            Convert to second, millisecond, microsecond
+            </summary>
+        </member>
+        <member name="F:SG.UnixTime.Standard.ConvertFormat.ToSeconds">
+            <summary>
+            convert to second, returned type : Int32 / int
+            </summary>
+        </member>
+        <member name="F:SG.UnixTime.Standard.ConvertFormat.ToMilliseconds">
+            <summary>
+            convert to second, returned type : Int64 / long
+            </summary>
+        </member>
+        <member name="T:SG.UnixTime.Standard.UnixTime">
+            <summary>
+            C# Unix Time Converter
+            </summary>
+        </member>
+        <member name="P:SG.UnixTime.Standard.UnixTime.UtcNow">
+            <summary>
+            Get current UTC now
+            </summary>
+        </member>
+        <member name="M:SG.UnixTime.Standard.UnixTime.ToEpoch``1(System.DateTime,SG.UnixTime.Standard.ConvertFormat)">
+            <summary>
+            Convert Date Time to Unix Time Stamp
+            </summary>
+            <param name="_dateTime">_dateTime</param>
+            <param name="ConvertType">ConvertType (second, milliseconds)</param>
+            <returns></returns>
+        </member>
+        <member name="M:SG.UnixTime.Standard.UnixTime.ToEpoch(System.DateTime)">
+            <summary>
+            Convert Unix Time Stamp to Date Time
+            </summary>
+            <param name="_dateTime">Epoch Time</param>
+            <returns></returns>
+        </member>
+        <member name="M:SG.UnixTime.Standard.UnixTime.ToDateTime``1(``0,SG.UnixTime.Standard.ConvertFormat,SG.UnixTime.Standard.Format)">
+            <summary>
+            Convert Unix Time Stamp to Date Time
+            </summary>
+            <param name="epoch">Epoch Time</param>
+            <param name="TimeFormat">TimeFormat</param>
+            <param name="ConvertType">ConvertType</param>
+            <returns></returns>
+        </member>
+        <member name="M:SG.UnixTime.Standard.UnixTime.AddSeconds``1(``0,System.Int32)">
+            <summary>
+            Add seconds for Epoch time
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="epoch">epoch</param>
+            <param name="seconds">seconds</param>
+            <returns></returns>
+        </member>
+        <member name="M:SG.UnixTime.Standard.UnixTime.AddMilliseconds``1(``0,System.Int32)">
+            <summary>
+            Add milliseconds for Epoch time
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="epoch">epoch</param>
+            <param name="milliseconds">seconds</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
